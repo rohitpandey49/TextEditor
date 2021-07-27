@@ -14,7 +14,8 @@ public class functionColor {
 
         JFrame colorframe = new JFrame("Change Background Color");
         colorframe.setBounds(100, 100, 650, 350);
-        colorframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       // colorframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //colorframe.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         colorframe.setLayout(null);
 
         JPanel colorChooserPanel = new JPanel( );
@@ -44,7 +45,7 @@ public class functionColor {
     public void setfontColor(JTextArea area) {
         JFrame fontcolorframe = new JFrame("Change Font Color");
         fontcolorframe.setBounds(100, 100, 650, 350);
-        fontcolorframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //fontcolorframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fontcolorframe.setLayout(null);
 
         JPanel fontColorChooserPanel = new JPanel( );

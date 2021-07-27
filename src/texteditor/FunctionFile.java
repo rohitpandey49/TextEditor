@@ -16,7 +16,7 @@ public class FunctionFile {
      //Open new text editor
      public void newTextEditor(JTextArea area, JFrame window){
           area.setText("");
-          window.setTitle("Untitiled - Notepad");
+          window.setTitle("Untitled - Notepad");
           filegetname = null;
      }
      //Open existing file in text editor

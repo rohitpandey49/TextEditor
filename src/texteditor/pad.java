@@ -29,12 +29,15 @@ public class pad implements ActionListener {
     FunctionFile objFile = new FunctionFile( );
     functionColor objColor = new functionColor( );
 
-    public pad() {
+pad() {
 
         window = new JFrame( );
         window.setTitle("Untitled - Notepad");
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setBounds(0, 0, 1536, 864);
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/texteditor/notepad.png");
+        window.setIconImage(icon);
 
         JMenuBar menu = new JMenuBar( );
         JMenu file = new JMenu("File");
@@ -54,10 +57,6 @@ public class pad implements ActionListener {
         JMenuItem newdoc = new JMenuItem("New");
         newdoc.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
         newdoc.addActionListener(this);
-
-        JMenuItem newwin = new JMenuItem("New Window");
-        newwin.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.SHIFT_DOWN_MASK + InputEvent.CTRL_MASK));
-        newwin.addActionListener(this);
 
         JMenuItem open = new JMenuItem("Open");
         open.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
@@ -162,7 +161,6 @@ public class pad implements ActionListener {
 
 
         file.add(newdoc);
-        file.add(newwin);
         file.add(open);
         file.add(save);
         file.add(saveas);
@@ -230,8 +228,6 @@ public class pad implements ActionListener {
             case "Open":
                 objFile.open(area, window);
 
-                break;
-            case "New Window":
                 break;
             case "Save":
                 objFile.save(saveas, area);
